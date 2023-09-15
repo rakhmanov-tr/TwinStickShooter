@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://yqymno5ctfj4"]
+
+[ext_resource type="Script" path="res://projectile.gd" id="1_ai0pg"]
+[ext_resource type="Texture2D" uid="uid://dbqwt4va27arc" path="res://icon.svg" id="1_vlsih"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_agrhm"]
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_ai0pg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.701961, 0, 0.329412, 1)
+self_modulate = Color(16.57, 21.3, 31.36, 1)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_vlsih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_agrhm")

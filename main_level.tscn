@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://chrvrroc7xp4b"]
+[gd_scene load_steps=3 format=3 uid="uid://chrvrroc7xp4b"]
 
 [ext_resource type="PackedScene" uid="uid://bb8vl5wxloh47" path="res://player.tscn" id="1_m6hom"]
+[ext_resource type="PackedScene" uid="uid://yqymno5ctfj4" path="res://projectile.tscn" id="2_h6ag1"]
 
 [node name="main_level" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_m6hom")]
-position = Vector2(1013, 510)
+position = Vector2(579, 332)
 speed_multiplier = 1
+projectile = ExtResource("2_h6ag1")
