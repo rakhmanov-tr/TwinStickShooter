@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dyxew7gh3sx6"]
+
+[node name="spawn_point" type="Node2D" groups=["spawn"]]

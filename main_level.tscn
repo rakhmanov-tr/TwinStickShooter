@@ -1,11 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://chrvrroc7xp4b"]
+[gd_scene load_steps=4 format=3 uid="uid://chrvrroc7xp4b"]
 
 [ext_resource type="PackedScene" uid="uid://bb8vl5wxloh47" path="res://player.tscn" id="1_m6hom"]
 [ext_resource type="PackedScene" uid="uid://yqymno5ctfj4" path="res://projectile.tscn" id="2_h6ag1"]
+[ext_resource type="PackedScene" uid="uid://dyxew7gh3sx6" path="res://spawn_point.tscn" id="4_uf4as"]
 
-[node name="main_level" type="Node2D"]
+[node name="main_level" type="Node2D" groups=["level"]]
 
-[node name="player" parent="." instance=ExtResource("1_m6hom")]
+[node name="player" parent="." groups=["player"] instance=ExtResource("1_m6hom")]
 position = Vector2(579, 332)
 speed_multiplier = 1
 projectile = ExtResource("2_h6ag1")
+
+[node name="spawn_point" parent="." instance=ExtResource("4_uf4as")]
+position = Vector2(102, 78)
+
+[node name="spawn_point2" parent="." instance=ExtResource("4_uf4as")]
+position = Vector2(1052, 71)
+
+[node name="spawn_point3" parent="." instance=ExtResource("4_uf4as")]
+position = Vector2(1043, 567)
+
+[node name="spawn_point4" parent="." instance=ExtResource("4_uf4as")]
+position = Vector2(65, 586)

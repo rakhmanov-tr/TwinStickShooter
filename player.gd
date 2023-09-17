@@ -9,7 +9,7 @@ class_name player
 const MOVE_SPEED: float = 500.0
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move()
 	look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("shoot"): shoot()
@@ -24,8 +24,10 @@ func move() -> void:
 	velocity = movement * (MOVE_SPEED * speed_multiplier)
 	move_and_slide()
 
+
 func shoot() -> void:
 	var inst: projectile = projectile.instantiate()
+	inst.spawned_from = self
 	owner.add_child(inst)
 	inst.transform = spawn_point.global_transform
-	print("BANG!")
+#	print("BANG!")
